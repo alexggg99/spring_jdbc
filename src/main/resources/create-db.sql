@@ -1,0 +1,10 @@
+--DROP TABLE person IF EXISTS;
+
+CREATE TABLE person (
+  id         INTEGER PRIMARY KEY,
+  username  VARCHAR(30) UNIQUE,
+  email  VARCHAR(50),
+  surname  VARCHAR(50)
+);
+
+CREATE SEQUENCE PERSON_SEQ;
