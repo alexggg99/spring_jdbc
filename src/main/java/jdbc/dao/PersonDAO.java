@@ -1,6 +1,6 @@
-package spring_jdbc.dao;
+package jdbc.dao;
 
-import spring_jdbc.domain.Person;
+import jdbc.domain.Person;
 
 public interface PersonDAO {
     void saveOrUpdate(Person person);

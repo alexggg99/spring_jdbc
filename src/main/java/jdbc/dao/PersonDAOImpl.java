@@ -1,4 +1,4 @@
-package spring_jdbc.dao;
+package jdbc.dao;
 
 import javax.sql.DataSource;
 
@@ -6,7 +6,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import org.springframework.jdbc.core.ResultSetExtractor;
-import spring_jdbc.domain.Person;
+import jdbc.domain.Person;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,6 +19,7 @@ public class PersonDAOImpl implements PersonDAO {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    @Override
     public void saveOrUpdate(Person person) {
         if (person.getId() > 0) {
             // update

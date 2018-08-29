@@ -1,9 +1,9 @@
-package spring_jdbc;
+package jdbc;
 
+import jdbc.dao.PersonDAO;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spring_jdbc.dao.PersonDAO;
-import spring_jdbc.domain.Person;
+import jdbc.domain.Person;
 
 
 /**
@@ -17,14 +17,14 @@ public class SpringApp {
 
         PersonDAO dao = (PersonDAO) context.getBean("personDao");
 
-        // Show Product object
+        // Show Person object
         dao.get("alexggg99");
 
-        // Insert operator
+        // Insert person
         Person person = new Person();
         person.setUsername("test898");
         person.setEmail("testEmail");
-        person.setSurname("sur");
+        person.setSurname("testSurname");
         dao.saveOrUpdate(person);
         System.out.println(dao.get("test898"));
 

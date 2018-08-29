@@ -1,4 +1,4 @@
-package spring_jdbc.domain;
+package jdbc.domain;
 
 import lombok.Data;
 
